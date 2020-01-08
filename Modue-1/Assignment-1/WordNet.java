@@ -1,30 +1,30 @@
 import java.util.*;
 import java.io.*;
 public class WordNet{
-    public static void hypernyms() throws Exception{
-        FileReader file=new FileReader("C:\\Users\\SREE BALAJI\\Downloads\\wordnet\\hypernyms.txt");
-        BufferedReader br=new BufferedReader(file);
+    public static void hypernyms(String hyper) throws Exception{
+        FileReader file=new FileReader("C:\\Users\\SREE BALAJI\\Downloads\\wordnet\\"+hyper+".txt");
+        BufferedReader b=new BufferedReader(file);
         String i="";
-        while((i=br.readLine())!=null){
-            String[] arr=i.split(" ,");
-            for(int k=0;k<arr.length;k++){
-                System.out.println(arr[k]);
-            }
+        while((i=b.readLine())!=null){
+            String arr[]=i.split(",");
+            // for(int k=0;k<arr.length;k++){
+                System.out.println(arr[0]);
+            // }
         }
     }
-    public static void synsets() throws Exception{
-        FileReader file=new FileReader("C:\\Users\\SREE BALAJI\\Downloads\\wordnet\\synsets.txt");
-        BufferedReader br=new BufferedReader(file);
+    public static void synsets(String syn) throws Exception{
+        FileReader file=new FileReader("C:\\Users\\SREE BALAJI\\Downloads\\wordnet\\"+syn+".txt");
+        BufferedReader b=new BufferedReader(file);
         String i="";
-        while((i=br.readLine())!=null){
-            String[] arr=i.split(" ,");
-            for(int k=0;k<arr.length;k++){
-                System.out.println(arr[k]);
-            }
+        while((i=b.readLine())!=null){
+            String arr[]=i.split(",");
+            // for(int k=0;k<arr.length;k++){
+                System.out.println(arr[0]);
+            // }
         }
     }
     public static void main(String[] args)throws Exception{
-        hypernyms();
-        synsets();
+        hypernyms("hypernyms");
+        synsets("synsets");
     }
 }
