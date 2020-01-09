@@ -1,4 +1,4 @@
-public class Digraph {
+public class Digraph1 {
     private final int V;           // number of vertices in this digraph
     private int E;                 // number of edges in this digraph
     private Bag<Integer>[] adj;    // adj[v] = adjacency list for vertex v
